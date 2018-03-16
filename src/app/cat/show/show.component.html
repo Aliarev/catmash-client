@@ -1,3 +1,12 @@
-<p>
-  Cat show
-</p>
+<h1>Classement</h1>
+
+<p-dataTable [value]="cats">
+  <p-column header="Photo">
+    <ng-template let-cat="rowData" pTemplate="body">
+      <img src="{{ cat.pictureUrl }}" height="50px" />
+    </ng-template>
+  </p-column>
+  <p-column field="id" header="ID"></p-column>
+  <p-column field="voteUp" header="+1" [sortable]="true"></p-column>
+  <p-column field="voteDown" header="-1" [sortable]="true"></p-column>
+</p-dataTable>
