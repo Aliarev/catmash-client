@@ -1,0 +1,47 @@
+﻿{
+  "runtime": "Default",
+  "swaggerGenerator": {
+    "fromSwagger": {
+      "url": "http://localhost:50001/swagger/v1/swagger.json",
+      "output": null
+    }
+  },
+  "codeGenerators": {
+    "swaggerToTypeScriptClient": {
+      "className": "WebApiService",
+      "moduleName": "",
+      "namespace": "",
+      "typeScriptVersion": 2.7,
+      "template": "Angular",
+      "promiseType": "Promise",
+      "httpClass": "Http",
+      "injectionTokenType": "InjectionToken",
+      "dateTimeType": "Date",
+      "nullValue": "Undefined",
+      "generateClientClasses": true,
+      "generateClientInterfaces": false,
+      "generateOptionalParameters": false,
+      "wrapDtoExceptions": false,
+      "wrapResponses": false,
+      "generateResponseClasses": true,
+      "responseClass": "SwaggerResponse",
+      "useTransformOptionsMethod": false,
+      "useTransformResultMethod": false,
+      "generateDtoTypes": true,
+      "operationGenerationMode": "MultipleClientsFromOperationId",
+      "markOptionalProperties": true,
+      "generateCloneMethod": false,
+      "typeStyle": "Class",
+      "generateDefaultValues": true,
+      "excludedTypeNames": [],
+      "handleReferences": false,
+      "generateConstructorInterface": true,
+      "convertConstructorInterfaceData": false,
+      "importRequiredTypes": true,
+      "useGetBaseUrlMethod": false,
+      "baseUrlTokenName": "API_BASE_URL",
+      "queryNullValue": "",
+      "output": "src/app/service/webapi.service.ts"
+    }
+  }
+}
