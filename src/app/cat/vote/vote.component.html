@@ -1,3 +1,18 @@
-<p>
-  Cat vote
-</p>
+<h1>Vote</h1>
+
+<div class="row" *ngIf="loading">
+  <div class="col-sm-12">Chargement...</div>
+</div>
+
+<div class="row" *ngIf="!loading">
+  <ng-template [ngIf]="!cats || cats.length != 2">
+    <div class="col-sm-12 error">Erreur</div>
+  </ng-template>
+  <ng-template [ngIf]="cats && cats.length == 2">
+    <div class="col-sm-6" *ngFor="let cat of cats; index as i">
+      <img src="{{ cat.pictureUrl }}" height="200px" />
+      <br/>
+      <button (click)="vote(i)">Vote</button>
+    </div>
+  </ng-template>
+</div>
